@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-Hant"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>好物編號清單</title>
+<style>
+:root{--bg:#f6f5f3;--fg:#1c1917;--muted:#78716c;--card:#fff;--line:#e7e5e4;--accent:#ee4d2d;--chip:#fff1ec}
+@media (prefers-color-scheme:dark){:root{--bg:#141210;--fg:#f5f5f4;--muted:#a8a29e;--card:#1f1c1a;--line:#34302c;--chip:#3a1d15}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;-webkit-text-size-adjust:100%}
+header{position:sticky;top:0;z-index:5;background:var(--bg);padding:16px 16px 12px;border-bottom:1px solid var(--line)}
+h1{font-size:20px;margin:0 0 10px}
+.search{display:flex;gap:8px}
+.search input{flex:1;font-size:18px;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--fg)}
+.note{font-size:12px;color:var(--muted);margin:8px 0 0}
+main{max-width:640px;margin:0 auto;padding:12px 16px 40px;display:grid;gap:14px}
+.card{display:grid;grid-template-columns:96px 1fr;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px;scroll-margin-top:130px}
+.card.hit{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 25%,transparent)}
+.thumb{position:relative}
+.thumb img,.noimg{width:96px;aspect-ratio:9/16;object-fit:cover;border-radius:10px;background:var(--line);display:block}
+.num{position:absolute;left:6px;top:6px;background:var(--accent);color:#fff;font-weight:700;font-size:13px;padding:2px 8px;border-radius:999px}
+h2{font-size:16px;margin:2px 0 8px}
+ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+li{display:grid;grid-template-columns:22px 1fr auto;align-items:center;gap:8px}
+.idx{width:22px;height:22px;border-radius:50%;background:var(--chip);color:var(--accent);font-size:12px;font-weight:700;display:grid;place-items:center}
+.pname{font-size:14px;line-height:1.3}
+.price{font-size:13px;color:var(--muted)}
+.buy{background:var(--accent);color:#fff;text-decoration:none;font-size:14px;font-weight:600;padding:10px 12px;border-radius:10px;white-space:nowrap}
+.buy.off{background:var(--line);color:var(--muted)}
+.empty{text-align:center;color:var(--muted);padding:30px 0;display:none}
+footer{font-size:12px;color:var(--muted);text-align:center;padding:0 16px 30px;line-height:1.6}
+</style></head>
+<body>
+<header>
+<h1>好物編號清單</h1>
+<div class="search"><input id="q" type="search" inputmode="numeric" placeholder="輸入影片裡的編號，例如 001" autocomplete="off"></div>
+<p class="note">本頁連結含蝦皮分潤，透過連結購買我會獲得小額回饋，不影響你的價格。</p>
+</header>
+<main id="list">
+<article class="card" id="003" data-num="003">
+<div class="thumb"><img src="img/003.jpg" alt="" loading="lazy"><span class="num">#003</span></div>
+<div class="body"><h2>早八通勤3寶，學生黨必備</h2><ul><li><span class="idx">1</span><div class="pinfo">
+<div class="pname">RICO GSC 日日杯 600ml</div><div class="price">NT$599</div></div><a class="buy" href="https://s.shopee.tw/4B0QCrYw3e" rel="nofollow sponsored noopener">去蝦皮看 →</a></li><li><span class="idx">2</span><div class="pinfo">
+<div class="pname">夾式擺頭 USB 小風扇</div><div class="price">NT$469</div></div><a class="buy" href="https://s.shopee.tw/40h00YZZOd" rel="nofollow sponsored noopener">去蝦皮看 →</a></li><li><span class="idx">3</span><div class="pinfo">
+<div class="pname">CW 降噪藍牙耳機</div><div class="price">NT$399</div></div><a class="buy" href="https://s.shopee.tw/5AsxOhV81s" rel="nofollow sponsored noopener">去蝦皮看 →</a></li></ul></div>
+</article>
+<article class="card" id="002" data-num="002">
+<div class="thumb"><img src="img/002.jpg" alt="" loading="lazy"><span class="num">#002</span></div>
+<div class="body"><h2>期末桌面升級 4 件</h2><ul><li><span class="idx">1</span><div class="pinfo">
+<div class="pname">POLYWELL 觸控 LED 檯燈</div><div class="price">NT$350</div></div><a class="buy" href="https://s.shopee.tw/5AsxOeBvIE" rel="nofollow sponsored noopener">去蝦皮看 →</a></li><li><span class="idx">2</span><div class="pinfo">
+<div class="pname">LED 螢幕掛燈</div><div class="price">NT$259</div></div><a class="buy" href="https://s.shopee.tw/50ZXCLCYdD" rel="nofollow sponsored noopener">去蝦皮看 →</a></li><li><span class="idx">3</span><div class="pinfo">
+<div class="pname">羅技 M331 靜音滑鼠</div><div class="price">NT$649</div></div><a class="buy" href="https://s.shopee.tw/2qV2cMKo1o" rel="nofollow sponsored noopener">去蝦皮看 →</a></li><li><span class="idx">4</span><div class="pinfo">
+<div class="pname">床上摺疊懶人桌</div><div class="price">NT$399</div></div><a class="buy" href="https://s.shopee.tw/2gBcQ3LRMn" rel="nofollow sponsored noopener">去蝦皮看 →</a></li></ul></div>
+</article>
+<article class="card" id="001" data-num="001">
+<div class="thumb"><img src="img/001.jpg" alt="" loading="lazy"><span class="num">#001</span></div>
+<div class="body"><h2>宿舍充電救星 3 選</h2><ul><li><span class="idx">1</span><div class="pinfo">
+<div class="pname">CW 超薄磁吸行動電源</div><div class="price">NT$790</div></div><a class="buy" href="https://s.shopee.tw/7Ae1mHMqRD" rel="nofollow sponsored noopener">去蝦皮看 →</a></li><li><span class="idx">2</span><div class="pinfo">
+<div class="pname">POLYWELL 65W 數顯三孔快充頭</div><div class="price">NT$600</div></div><a class="buy" href="https://s.shopee.tw/60S4O8RHo0" rel="nofollow sponsored noopener">去蝦皮看 →</a></li><li><span class="idx">3</span><div class="pinfo">
+<div class="pname">宏晉 防雷擊延長線</div><div class="price">NT$399</div></div><a class="buy" href="https://s.shopee.tw/6AlUaRQeT3" rel="nofollow sponsored noopener">去蝦皮看 →</a></li></ul></div>
+</article>
+<p class="empty" id="empty">找不到這個編號，確認一下影片結尾的數字？</p>
+</main>
+<footer>商品資訊整理自蝦皮商品頁，價格與規格以賣場為準。</footer>
+<script>
+const cards=[...document.querySelectorAll('.card')], q=document.getElementById('q'), empty=document.getElementById('empty');
+function norm(v){v=(v||'').replace(/\D/g,'');return v?v.padStart(3,'0'):''}
+function apply(v,scroll){
+  const n=norm(v); let shown=0;
+  cards.forEach(c=>{const m=!n||c.dataset.num===n||c.dataset.num.endsWith(n);c.style.display=m?'':'none';c.classList.toggle('hit',!!n&&c.dataset.num===n);shown+=m});
+  empty.style.display=shown?'none':'block';
+  if(scroll&&n){const t=document.getElementById(n);if(t)t.scrollIntoView({behavior:'smooth'})}
+}
+q.addEventListener('input',()=>apply(q.value,false));
+const h=location.hash.slice(1); if(h){q.value=norm(h);apply(h,true)}
+</script>
+</body></html>
